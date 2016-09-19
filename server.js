@@ -2,6 +2,7 @@ var express = require('express');
 var app = express();
 var months = ['January','February','March','April','May','June','July','August','September','October','November','December'];
 
+app.use(express.static(__dirname + '/public'));
 app.get('/:timein', function (req, res) {
 	jsonRes = {"unix":null,"natural":null};
 	var timeParse = new Date(req.params.timein);
@@ -19,7 +20,9 @@ app.get('/:timein', function (req, res) {
 	}
 	res.end(JSON.stringify(jsonRes));	
 });
-
+app.get('/',function(req,res){
+	res.sendFile('index.html');
+});
 app.listen(8080, function () {
   console.log('Timestamp Microservice listening on port 8080!');
 });
