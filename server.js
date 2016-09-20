@@ -23,7 +23,7 @@ app.get('/:timein', function (req, res) {
 app.get('/',function(req,res){
 	res.sendFile('index.html');
 });
-app.listen(8080, function () {
-  console.log('Timestamp Microservice listening on port 8080!');
+app.listen(process.env.PORT || 8080, function () {
+  console.log('Timestamp Microservice listening on port '+process.env.PORT||8080+'!');
 });
 
