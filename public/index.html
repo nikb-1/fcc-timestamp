@@ -16,10 +16,8 @@
 		It can be used by passing either a UNIX timestamp or a natural language date to the root end point as a parameter, i.e. <code>"/:date_goes_here"</code><br/><br/>The API returns a JSON string with a "unix" property with a unix timestamp value and a "natural" property with a value representing a natural language date. Both values being representations of the passed parameter.<br/><br/>
 		Incorrectly formatted parameters will return null values for the JSON objects properties.</p><br/>
 		<h3>Usage</h3>
-		<p><code>
-			https://fcc-backend-nikola-burazor.c9users.io/December%2015,%202015
-			https://fcc-backend-nikola-burazor.c9users.io/1450137600000
-		</code></p>
+		<p><code>https://fcc-backend-nikola-burazor.c9users.io/December%2015,%202015</code></p>
+		<p><code>https://fcc-backend-nikola-burazor.c9users.io/1450137600000</code></p>
 		<h3>Output</h3>
 		<p><code>{"unix":1450137600000,"natural":"December 15, 2015"}</code></p>
 	</div>
